@@ -195,6 +195,15 @@
                         <Component Id='gtk4_harfbuzz.dll' Guid='14df96a7-c29b-4936-b15d-2e392c6ac87d'>
                             <File Id='harfbuzz.dll' Name='harfbuzz.dll' DiskId='1' Source='$(var.CargoTargetDir)\wix\gtk4\bin\harfbuzz.dll' />
                         </Component>
+                        <Component Id='gtk4_harfbuzz_gpu.dll' Guid='2b624b4d-bd13-4889-874c-3418e1a03509'>
+                            <File Id='harfbuzz_gpu.dll' Name='harfbuzz-gpu.dll' DiskId='1' Source='$(var.CargoTargetDir)\wix\gtk4\bin\harfbuzz-gpu.dll' />
+                        </Component>
+                        <Component Id='gtk4_harfbuzz_raster.dll' Guid='b28ce13b-b47c-4d7e-9fc3-11d358bf7f73'>
+                            <File Id='harfbuzz_raster.dll' Name='harfbuzz-raster.dll' DiskId='1' Source='$(var.CargoTargetDir)\wix\gtk4\bin\harfbuzz-raster.dll' />
+                        </Component>
+                        <Component Id='gtk4_harfbuzz_vector.dll' Guid='e7342383-9a57-46ed-93aa-ede60871f35c'>
+                            <File Id='harfbuzz_vector.dll' Name='harfbuzz-vector.dll' DiskId='1' Source='$(var.CargoTargetDir)\wix\gtk4\bin\harfbuzz-vector.dll' />
+                        </Component>
                         <Component Id='gtk4_iconv.dll' Guid='855c0e25-7633-4106-97f1-15d505808fb2'>
                             <File Id='iconv.dll' Name='iconv.dll' DiskId='1' Source='$(var.CargoTargetDir)\wix\gtk4\bin\iconv.dll' />
                         </Component>
@@ -380,6 +389,9 @@
             <ComponentRef Id='gtk4_harfbuzz_gobject.dll'/>
             <ComponentRef Id='gtk4_harfbuzz_subset.dll'/>
             <ComponentRef Id='gtk4_harfbuzz.dll'/>
+            <ComponentRef Id='gtk4_harfbuzz_gpu.dll'/>
+            <ComponentRef Id='gtk4_harfbuzz_raster.dll'/>
+            <ComponentRef Id='gtk4_harfbuzz_vector.dll'/>
             <ComponentRef Id='gtk4_iconv.dll'/>
             <ComponentRef Id='gtk4_intl.dll'/>
             <ComponentRef Id='gtk4_jpeg62.dll'/>
