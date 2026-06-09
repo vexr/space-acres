@@ -250,10 +250,13 @@ pub async fn create(
                         if let Err(error) = Config::try_from_raw_config(&raw_config).await {
                             notifications_sender
                                 .send(BackendNotification::ConfigurationIsInvalid { error })
-                                .await?;
+                                .await
+                                .map_err(anyhow::Error::msg)?;
                         }
 
-                        let config_file_path = RawConfig::default_path().await?;
+                        let config_file_path = RawConfig::default_path()
+                            .await
+                            .map_err(anyhow::Error::msg)?;
                         raw_config
                             .write_to_path(&config_file_path)
                             .await
