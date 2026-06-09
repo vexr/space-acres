@@ -21,7 +21,10 @@ gthread-2.0-0.dll
 gtk-4-1.dll
 harfbuzz-cairo.dll
 harfbuzz-gobject.dll
+harfbuzz-gpu.dll
+harfbuzz-raster.dll
 harfbuzz-subset.dll
+harfbuzz-vector.dll
 harfbuzz.dll
 iconv.dll
 intl.dll

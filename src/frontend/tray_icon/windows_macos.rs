@@ -21,14 +21,14 @@ pub(in super::super) async fn spawn(sender: &AsyncComponentSender<App>) -> Optio
         let menu_close_id = menu_close.id().clone();
 
         let menu = Menu::with_items(&[menu_open, menu_close])
-            .map_err(|error| format!("Failed to create tray icon menu: {error}"))?;
+            .map_err(|error| format!("Failed to create tray icon menu: {error}").into())?;
 
         let icon = TrayIconBuilder::new()
             .with_tooltip("Space Acres")
             .with_icon(icon)
             .with_menu(Box::new(menu))
             .build()
-            .map_err(|error| format!("Failed to create tray icon: {error}"))?;
+            .map_err(|error| format!("Failed to create tray icon: {error}").into())?;
 
         let menu_events = MenuEvent::receiver();
         sender.spawn_command(move |sender| {
